@@ -12,17 +12,33 @@
 <body class="flex-column min-100-vh">
   <header class="hero">
     <h1 class="app-title">Showing Issues for: <span id="repo-name"></span></h1>
-    
+
     <div>
       <a href="./index.html" class="btn-back">
         Go Back
       </a>
     </div>
-    
+
   </header>
-  
-  <main>
-  
+
+  <main class="flex-row justify-space-between">
+    <!-- left column/searchbox -->
+    <div class="col-12 col-md-4">
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search By User</h3>
+        <form id="user-form" class="card-body">
+          <label class="form-label" for="username">Username</label>
+          <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+          <button type="submit" class="btn">Get User</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- right column/repos -->
+    <div class="col-12 col-md-8">
+      <h2 class="subtitle">Showing Repositories for: <span id="repo-search-term"></span></h2>
+      <div id="repos-container" class="list-group"></div>
+    </div>
   </main>
 
   <!-- add script here -->
